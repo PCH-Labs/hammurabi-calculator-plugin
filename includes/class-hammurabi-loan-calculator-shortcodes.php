@@ -54,4 +54,34 @@ class Hammurabi_Loan_Calculator_Shortcodes
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 	}
+
+	/**
+	 * Adds Calculator react app trhough the use of a shortcode
+	 *
+	 * @since    1.0.0
+	 * @param      string    $plugin_name       The name of the plugin.
+	 * @param      string    $version    The version of this plugin.
+	 */
+	public function insert_calculator($args)
+	{
+		ob_start();
+		$shortcode_version = $args['version'];
+		require_once(WP_PLUGIN_DIR . '/hammurabi-loan-calculator/public/partials/hammurabi-loan-calculator-public-display.php');
+		return ob_get_clean();
+	}
+
+	/**
+	 * Adds Calculator react app trhough the use of a shortcode
+	 *
+	 * @since    1.0.0
+	 * @param      string    $plugin_name       The name of the plugin.
+	 * @param      string    $version    The version of this plugin.
+	 */
+	public function insert_screening($args)
+	{
+		ob_start();
+		$shortcode_version = $args['version'];
+		require_once(WP_PLUGIN_DIR . '/hammurabi-loan-calculator/public/partials/hammurabi-loan-screening-display.php');
+		return ob_get_clean();
+	}
 }

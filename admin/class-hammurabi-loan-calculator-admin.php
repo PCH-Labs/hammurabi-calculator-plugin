@@ -114,7 +114,7 @@ class Hammurabi_Loan_Calculator_Admin
 	{
 		// This role should change for a custom data role
 		$capability = 'activate_plugins';
-		add_menu_page("Loan Calculator", "Hammurabi Loan Calculator", $capability, 'hammurabi-loan-calculator-admin', array($this, 'main_menu'), '', '68');
+		add_menu_page("Loan Calculator", "Hammurabi", $capability, 'hammurabi-loan-calculator-admin', array($this, 'main_menu'), '', '68');
 		add_submenu_page('hammurabi-loan-calculator-admin', "Loan Calculator - Hammurabi", 'Ignite Connect', $capability, 'hammurabi-loan-calculator-admin', array($this, 'main_menu'));
 	}
 

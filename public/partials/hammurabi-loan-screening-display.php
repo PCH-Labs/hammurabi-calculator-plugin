@@ -23,8 +23,7 @@ $react->add_react_scripts(true);
 
 <script id="hammurabi-loan-calculator-react-app">
 var hammurabiView = {
-    page: 'calculator',
-    version: '<?php echo $shortcode_version; ?>',
+    page: 'screening',
 };
 </script>
 <div id="hammurabi-tools"></div>

@@ -13,9 +13,9 @@
  * @package           Hammurabi_Loan_Calculator
  *
  * @wordpress-plugin
- * Plugin Name:       Ignite Core Pot
+ * Plugin Name:       Hammurabi Tools
  * Plugin URI:        https://pchlabs.com/plugins/loan-calculator
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Set of tools developed by PCHLABS, in order to connect this site to SimplyBorrowed's Loan Managemente System: Hammurabi
  * Version:           1.0.0
  * Author:            PCHLABS
  * Author URI:        https://pchlabs.com/plugins

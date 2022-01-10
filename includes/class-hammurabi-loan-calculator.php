@@ -212,11 +212,9 @@ class Hammurabi_Loan_Calculator
 	{
 
 		$plugin_shortcodes = new Hammurabi_Loan_Calculator_Shortcodes($this->get_plugin_name(), $this->get_version());
-
-		//$this->loader->add_shortcode( 'sherlock_subscription', $plugin_shortcodes, 'subscription_form' );
-
+		$this->loader->add_shortcode('hammurabi_calculator', $plugin_shortcodes, 'insert_calculator');
+		$this->loader->add_shortcode('hammurabi_screening', $plugin_shortcodes, 'insert_screening');
 	}
-
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
 	 *

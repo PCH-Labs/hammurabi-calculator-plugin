@@ -60,6 +60,7 @@ class Hammurabi_Loan_Calculator_React
 
         // Convert json to php array.
         $files_data = json_decode($request);
+
         if ($files_data === null)
             return;
 
@@ -76,22 +77,22 @@ class Hammurabi_Loan_Calculator_React
         foreach ($css_files as $index => $css_file) {
             wp_enqueue_style('react-plugin-' . $index, $react_app_build . $css_file);
         }
-
         // Load js files.
-        foreach ($js_files as $index => $js_file) {
-            wp_enqueue_script('react-plugin-' . $index, $react_app_build . $js_file, array(), 1, true);
+        foreach ($js_files as $js_index => $js_file) {
+            wp_enqueue_script('react-plugin-' . $js_index, $react_app_build . $js_file, array(), 1, true);
         }
+
         // Variables for app use.
         wp_localize_script(
-            'react-plugin-0',
-            'rpReactPlugin',
+            'react-plugin-1',
+            'hammurabiReactTools',
             array(
-                'appSelector' => '#hammurabi-loan-calculator',
+                'appSelector' => '#hammurabi-tools',
                 'nonce' => wp_create_nonce('wp_rest'),
                 'url' => get_rest_url(null, '/'),
                 'page' => $page,
                 'assetsUrl' =>  plugin_dir_url((dirname(__FILE__))) . 'build/',
-                'pluginVersion' => Hammurabi_Loan_Calculator_VERSION,
+                'pluginVersion' => HAMMURABI_LOAN_CALCULATOR_VERSION,
                 'siteLanguage' => str_split(get_locale(), 2)[0]
             )
         );

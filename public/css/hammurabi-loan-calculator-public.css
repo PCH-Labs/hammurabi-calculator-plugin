@@ -1,0 +1,9 @@
+.MuiOutlinedInput-input {
+	padding: 24px 14px !important;
+	border: 0 !important;
+	color: black;
+}
+img {
+	border-style: none !important;
+	display: initial !important;
+}
