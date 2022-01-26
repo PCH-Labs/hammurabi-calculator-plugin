@@ -176,7 +176,6 @@ class Hammurabi_Loan_Calculator
 	{
 
 		$plugin_admin = new Hammurabi_Loan_Calculator_Admin($this->get_plugin_name(), $this->get_version());
-		$plugin_api = new Hammurabi_Loan_Calculator_API();
 
 		$this->loader->add_action('admin_menu', $plugin_admin, 'admin_menu');
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
@@ -195,8 +194,11 @@ class Hammurabi_Loan_Calculator
 
 		$plugin_settings = new Hammurabi_Loan_Calculator_Settings();
 		$plugin_public = new Hammurabi_Loan_Calculator_Public($this->get_plugin_name(), $this->get_version(), $plugin_settings->get_settings());
+		$plugin_api = new Hammurabi_Loan_Calculator_API();
 
 		$this->loader->add_action('init', $plugin_settings, 'register_settings');
+		// Register API Endpoints
+		$this->loader->add_action('rest_api_init', $plugin_api, 'add_api_routes');
 		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
 		$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
 	}

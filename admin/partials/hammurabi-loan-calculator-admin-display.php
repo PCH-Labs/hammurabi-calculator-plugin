@@ -22,8 +22,8 @@ $react->add_react_scripts(true);
 ?>
 
 <script id="hammurabi-loan-calculator-react-app">
-var igniteCoreView = {
+var hammurabiView = {
     page: 'admin',
 };
 </script>
-<div id="ignite-core-vitubroker"></div>
+<div id="hammurabi-tools"></div>

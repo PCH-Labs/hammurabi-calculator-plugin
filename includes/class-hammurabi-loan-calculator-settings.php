@@ -48,7 +48,13 @@ class Hammurabi_Loan_Calculator_Settings
 	 * @var array
 	 */
 	protected $defaults = array(
-		'activated'			=> true
+		'apply_now_url'			=> '',
+		'schedule_a_call_url'	=> '',
+		'dont_apply_url'		=> '',
+		'auth0_id'				=> '',
+		'auth0_callback'		=> '',
+		'auth0_domain'			=> '',
+		'full_calculator_url' 	=> '',
 	);
 	/**
 	 * Get saved settings

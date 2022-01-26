@@ -129,6 +129,6 @@ class Hammurabi_Loan_Calculator_Admin
 	 */
 	public function main_menu()
 	{
-		return "<h1>Loan Calculator</h1>";
+		require_once plugin_dir_path(__FILE__) . 'partials/hammurabi-loan-calculator-admin-display.php';
 	}
 }
